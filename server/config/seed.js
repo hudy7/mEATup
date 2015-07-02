@@ -7,7 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
-var Events = require('../api/user/events.model');
+var Events = require('../api/events/events.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
