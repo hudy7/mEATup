@@ -7,6 +7,7 @@
 
 var Thing = require('../api/thing/thing.model');
 var User = require('../api/user/user.model');
+var Events = require('../api/user/events.model');
 
 Thing.find({}).remove(function() {
   Thing.create({
@@ -46,4 +47,18 @@ User.find({}).remove(function() {
       console.log('finished populating users');
     }
   );
+});
+
+Events.find({}).remove(function() {
+  Events.create({
+    name: 'test1',
+    description: '',
+    date: '2015-07-24',
+    time: '11:30',
+    location: 'test1',
+    meetingLocation: '13th kitchen',
+    meetingTime: '11:15',
+    attendees: ['Joe', 'Nick', 'Zack', 'Steve'],
+    createdBy: 'Joe'
+  });
 });
