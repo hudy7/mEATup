@@ -1,3 +1,25 @@
+@font-face {
+    font-family: Dinot-Regular;
+    src: url('../../assets/fonts/Dinot/DIN-Regular.otf');
+}
+
+@font-face {
+    font-family: Proforma-Book;
+    src: url('../../assets/fonts/Proforma/Proforma-Book.otf');
+}
+
+body {
+    font-family: Dinot-Regular, Arial, serif;
+}
+
+body h1 {
+  font-family: Proforma-Book, Arial, serif;
+}
+
+body h2 {
+  font-family: Proforma-Book, Arial, serif;
+}
+
 .thing-form {
     margin: 20px 0;
 }
@@ -8,6 +30,7 @@
 }
 
 #banner h1 {
+    font-family: Proforma-Book, Arial, serif;
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
@@ -16,10 +39,14 @@
 .hero-unit {
     position: relative;
     padding: 30px 15px;
-    color: #F5F5F5;
+    color: #00BCE4;
     text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    background: #4393B9;
+    text-shadow: 0 1px 0 rgba(0, 1, 4, .1);
+    background: #3A3A38;
+}
+
+#EAT {
+  color: #FFFFFF;
 }
 
 .footer {

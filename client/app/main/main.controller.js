@@ -2,10 +2,10 @@
 
 angular.module('lunchApp')
   .controller('MainCtrl', function ($scope, $http) {
-    $scope.awesomeThings = [];
+    $scope.events = [];
 
-    $http.get('/api/things').success(function(awesomeThings) {
-      $scope.awesomeThings = awesomeThings;
+    $http.get('/api/events').success(function(events) {
+      $scope.events = events;
     });
 
     $scope.addThing = function() {

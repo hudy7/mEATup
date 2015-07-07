@@ -52,7 +52,7 @@ User.find({}).remove(function() {
 Events.find({}).remove(function() {
   Events.create({
     name: 'test1',
-    description: '',
+    description: 'A lunch for anyone who wants to come!',
     date: '2015-07-24',
     time: '11:30',
     location: 'test1',
@@ -60,5 +60,16 @@ Events.find({}).remove(function() {
     meetingTime: '11:15',
     attendees: ['Joe', 'Nick', 'Zack', 'Steve'],
     createdBy: 'Joe'
-  });
+  },
+    {
+      name: 'test2',
+      description: 'A lunch for people who are on my team!',
+      date: '2015-07-25',
+      time: '11:45',
+      location: 'test2',
+      meetingLocation: '12th kitchen',
+      meetingTime: '11:40',
+      attendees: [],
+      createdBy: 'Alan'
+    });
 });
