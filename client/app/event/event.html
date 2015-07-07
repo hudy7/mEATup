@@ -10,31 +10,31 @@
 <div class="container">
   <div class="row panel panel-default">
     <div class="panel-heading"><h3 class="panel-title">{{event.name}}</h3></div>
-    <table class="table">
-      <tr>
-        <td class="blue text-right">WHERE ARE WE EATING?:</td>
-        <td>{{event.location}}</td>
-      </tr>
-      <tr>
-        <td class="blue text-right">WHEN ARE WE EATING?:</td>
-        <td>{{event.date | date}} at {{event.time}}</td>
-      </tr>
-      <tr>
-        <td class="blue text-right">WHERE ARE WE MEETING?:</td>
-        <td>{{event.meetingLocation}}</td>
-      </tr>
-      <tr>
-        <td class="blue text-right">WHEN ARE WE MEETING?:</td>
-        <td>{{event.meetingTime}}</td>
-      </tr>
-      <tr>
-        <td class="blue text-right">WHO STARTED THIS LUNCH?:</td>
-        <td>{{event.createdBy}}</td>
-      </tr>
-      <tr>
-        <td class="blue text-right">WHO IS GOING?:</</td>
-        <td><span ng-repeat="person in event.attendees">{{person}}, </span></td>
-      </tr>
-    </table>
+      <table class="table narrow">
+        <tr>
+          <td class="blue">WHERE ARE WE EATING?</td>
+          <td>{{event.location}}</td>
+        </tr>
+        <tr>
+          <td class="blue">WHEN ARE WE EATING?</td>
+          <td>{{event.date | date}} at {{event.time}}</td>
+        </tr>
+        <tr>
+          <td class="blue">WHERE ARE WE MEETING?</td>
+          <td>{{event.meetingLocation}}</td>
+        </tr>
+        <tr>
+          <td class="blue">WHEN ARE WE MEETING?</td>
+          <td>{{event.meetingTime}}</td>
+        </tr>
+        <tr>
+          <td class="blue">WHO STARTED THIS LUNCH?</td>
+          <td>{{event.createdBy}}</td>
+        </tr>
+        <tr>
+          <td class="blue">WHO IS GOING?</</td>
+          <td><span ng-repeat="person in event.attendees">{{person}}, </span></td>
+        </tr>
+      </table>
   </div>
 </div>
