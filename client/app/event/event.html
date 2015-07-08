@@ -1,40 +1,41 @@
 <div ng-include="'components/navbar/navbar.html'"></div>
 
-<div class="hero-unit" id="banner">
-  <div class="container">
-    <h1 id="header">m<span id="EAT">EAT UP!</span></h1>
-    <p class="lead">mEAT UP makes it easier than ever to get to know your <span id="EAT">friends and coworkers</span> over lunch!</p>
-  </div>
-</div>
+<div ng-include="'components/banner/banner.html'"></div>
 
 <div class="container">
-  <div class="row panel panel-default">
-    <div class="panel-heading"><h3 class="panel-title">{{event.name}}</h3></div>
-      <table class="table narrow">
-        <tr>
-          <td class="blue">WHERE ARE WE EATING?</td>
-          <td>{{event.location}}</td>
-        </tr>
-        <tr>
-          <td class="blue">WHEN ARE WE EATING?</td>
-          <td>{{event.date | date}} at {{event.time}}</td>
-        </tr>
-        <tr>
-          <td class="blue">WHERE ARE WE MEETING?</td>
-          <td>{{event.meetingLocation}}</td>
-        </tr>
-        <tr>
-          <td class="blue">WHEN ARE WE MEETING?</td>
-          <td>{{event.meetingTime}}</td>
-        </tr>
-        <tr>
-          <td class="blue">WHO STARTED THIS LUNCH?</td>
-          <td>{{event.createdBy}}</td>
-        </tr>
-        <tr>
-          <td class="blue">WHO IS GOING?</</td>
-          <td><span ng-repeat="person in event.attendees">{{person}}, </span></td>
-        </tr>
-      </table>
+  <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
+  <div class="col-md-6 col-sm-8 col-lg-6 col-xs-8">
+    <div class="row panel panel-default">
+      <div class="panel-heading"><h3 class="panel-title">{{event.name}}</h3></div>
+      <div class="container-fluid">
+        <table class="table panel-body">
+          <tr>
+            <td class="blue">WHERE ARE WE EATING?</td>
+            <td>{{event.location}}</td>
+          </tr>
+          <tr>
+            <td class="blue">WHEN ARE WE EATING?</td>
+            <td>{{event.date | date}} at {{event.time}}</td>
+          </tr>
+          <tr>
+            <td class="blue">WHERE ARE WE MEETING?</td>
+            <td>{{event.meetingLocation}}</td>
+          </tr>
+          <tr>
+            <td class="blue">WHEN ARE WE MEETING?</td>
+            <td>{{event.meetingTime}}</td>
+          </tr>
+          <tr>
+            <td class="blue">WHO STARTED THIS LUNCH?</td>
+            <td>{{event.createdBy}}</td>
+          </tr>
+          <tr>
+            <td class="blue">WHO IS GOING?</
+            </td>
+            <td><span ng-repeat="person in event.attendees">{{person}}, </span></td>
+          </tr>
+        </table>
+      </div>
+    </div>
   </div>
 </div>

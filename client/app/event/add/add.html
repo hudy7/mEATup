@@ -1,0 +1,42 @@
+<div ng-include="'components/navbar/navbar.html'"></div>
+
+<div ng-include="'components/banner/banner.html'"></div>
+
+<div class="container">
+  <form novalidate class="simple-form">
+    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
+    <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+      <table class="center-table">
+        <tr>
+          <td class="blue text-right">Name:</td>
+          <td><input type="text" ng-model="event.name"/></td>
+        </tr>
+        <tr>
+          <td class="blue text-right">Description:</td>
+          <td><input type="text" ng-model="event.description"/></td>
+        </tr>
+        <tr>
+          <td class="blue text-right">Date:</td>
+          <td><input type="date" ng-model="event.date"/></td>
+        </tr>
+        <tr>
+          <td class="blue text-right">Time:</td>
+          <td><input type="text" ng-model="event.time"/></td>
+        </tr>
+        <tr>
+          <td class="blue text-right">Location:</td>
+          <td><input type="text" ng-model="event.location"/></td>
+        </tr>
+        <tr>
+          <td class="blue text-right">Meeting Location:</td>
+          <td><input type="text" ng-model="event.meetingLocation"/></td>
+        </tr>
+        <tr>
+          <td class="blue text-right">Meeting Time:</td>
+          <td><input type="text" ng-model="event.meetingTime"/></td>
+        </tr>
+      </table>
+      <input type="submit" ng-click="addEvent()" class="center-block padding"/>
+    </div>
+  </form>
+</div>
