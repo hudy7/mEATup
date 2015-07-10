@@ -17,25 +17,26 @@
             <td class="blue">WHEN ARE WE EATING?</td>
             <td>{{event.date | date}} at {{event.time}}</td>
           </tr>
-          <tr>
-            <td class="blue">WHERE ARE WE MEETING?</td>
-            <td>{{event.meetingLocation}}</td>
+          <tr ng-show="event.meetingLocation.length > 0">
+            <td ng-show="event.meetingLocation.length > 0" class="blue">WHERE ARE WE MEETING?</td>
+            <td ng-show="event.meetingLocation.length > 0">{{event.meetingLocation}}</td>
           </tr>
-          <tr>
-            <td class="blue">WHEN ARE WE MEETING?</td>
-            <td>{{event.meetingTime}}</td>
+          <tr ng-show="event.meetingTime.length > 0">
+            <td ng-show="event.meetingTime.length > 0" class="blue">WHEN ARE WE MEETING?</td>
+            <td ng-show="event.meetingTime.length > 0">{{event.meetingTime}}</td>
           </tr>
           <tr>
             <td class="blue">WHO STARTED THIS LUNCH?</td>
             <td>{{event.createdBy}}</td>
           </tr>
           <tr>
-            <td class="blue">WHO IS GOING?</
-            </td>
+            <td class="blue">WHO IS GOING?</td>
             <td><span ng-repeat="person in event.attendees">{{person}}, </span></td>
           </tr>
         </table>
       </div>
     </div>
+    <a href="/home" ng-hide="(event.attendees.indexOf(Auth.getCurrentUser().name) >= 0)"
+       ng-click="signUpUser()" class="center-block btn btn-default">SIGN ME UP</a>
   </div>
 </div>

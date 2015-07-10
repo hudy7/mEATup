@@ -1,6 +1,5 @@
 
-.center-table
-{
+.center-table {
   margin: 0 auto !important;
   float: none !important;
 }
@@ -11,4 +10,12 @@ td {
 
 input {
   margin-top: 5px;
+}
+
+.css-form input.ng-invalid.ng-touched {
+  outline: #FA787E solid 2px;
+}
+
+.css-form input.ng-valid.ng-touched {
+  outline: 0 solid #FFFFFF;
 }

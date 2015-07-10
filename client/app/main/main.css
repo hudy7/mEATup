@@ -1,15 +1,15 @@
 @font-face {
-    font-family: Dinot-Regular;
-    src: url('../../assets/fonts/Dinot/DIN-Regular.otf');
+  font-family: Dinot-Regular;
+  src: url('../../assets/fonts/Dinot/DIN-Regular.otf');
 }
 
 @font-face {
-    font-family: Proforma-Book;
-    src: url('../../assets/fonts/Proforma/Proforma-Book.otf');
+  font-family: Proforma-Book;
+  src: url('../../assets/fonts/Proforma/Proforma-Book.otf');
 }
 
 body {
-    font-family: Dinot-Regular, Arial, serif;
+  font-family: Dinot-Regular, Arial, serif;
 }
 
 body h1 {
@@ -21,28 +21,28 @@ body h2 {
 }
 
 .thing-form {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 #banner {
-    border-bottom: none;
-    margin-top: -20px;
+  border-bottom: none;
+  margin-top: -20px;
 }
 
 #banner h1 {
-    font-family: Proforma-Book, Arial, serif;
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
+  font-family: Proforma-Book, Arial, serif;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
 }
 
 .hero-unit {
-    position: relative;
-    padding: 30px 15px;
-    color: #00BCE4;
-    text-align: center;
-    text-shadow: 0 1px 0 rgba(0, 1, 4, .1);
-    background: #3A3A38;
+  position: relative;
+  padding: 30px 15px;
+  color: #00BCE4;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 1, 4, .1);
+  background: #3A3A38;
 }
 
 #EAT {
@@ -50,8 +50,8 @@ body h2 {
 }
 
 .footer {
-    text-align: center;
-    padding: 30px 0;
-    margin-top: 70px;
-    border-top: 1px solid #E5E5E5;
+  text-align: center;
+  padding: 30px 0;
+  margin-top: 70px;
+  border-top: 1px solid #E5E5E5;
 }

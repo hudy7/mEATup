@@ -14,6 +14,7 @@
 
 <div class="container">
   <h1>Upcoming lunches:</h1>
+
   <div class="container">
     <div ng-repeat="event in events | orderBy: ['date','time']">
       <div class="panel panel-default">
@@ -27,10 +28,9 @@
           </span>
         </div>
         <div class="panel-body">
-          <span>&emsp;&emsp;{{event.description}}</span>
+          <span>&emsp;{{event.description}}</span>
         </div>
       </div>
     </div>
   </div>
 </div>
-

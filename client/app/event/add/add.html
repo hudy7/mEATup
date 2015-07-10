@@ -3,40 +3,47 @@
 <div ng-include="'components/banner/banner.html'"></div>
 
 <div class="container">
-  <form novalidate class="simple-form">
+  <form novalidate name="form" class="css-form">
     <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
     <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
       <table class="center-table">
         <tr>
-          <td class="blue text-right">Name:</td>
-          <td><input type="text" ng-model="event.name"/></td>
+          <td class="blue text-right">WHATS THE EVENT CALLED:&emsp;</td>
+          <td><input type="text" ng-model="event.name" name="name" required/>
+          </td>
         </tr>
         <tr>
-          <td class="blue text-right">Description:</td>
+          <td class="blue text-right">DESCRIBE IT:&emsp;</td>
           <td><input type="text" ng-model="event.description"/></td>
         </tr>
         <tr>
-          <td class="blue text-right">Date:</td>
-          <td><input type="date" ng-model="event.date"/></td>
+          <td class="blue text-right">WHAT DAY IS IT:&emsp;</td>
+          <td><input type="date" ng-model="event.date" name="date" id="event-date" required/>
+          </td>
         </tr>
         <tr>
-          <td class="blue text-right">Time:</td>
-          <td><input type="text" ng-model="event.time"/></td>
+          <td class="blue text-right">WHAT TIME IS IT:&emsp;</td>
+          <td><input type="text" ng-model="event.time" name="time" required/>
+          </td>
         </tr>
         <tr>
-          <td class="blue text-right">Location:</td>
-          <td><input type="text" ng-model="event.location"/></td>
+          <td class="blue text-right">WHERE IS IT:&emsp;</td>
+          <td><input type="text" ng-model="event.location" name="location" required/></td>
         </tr>
         <tr>
-          <td class="blue text-right">Meeting Location:</td>
+          <td class="blue text-right">ARE YOU MEETING SOMEWHERE:&emsp;</td>
           <td><input type="text" ng-model="event.meetingLocation"/></td>
         </tr>
         <tr>
-          <td class="blue text-right">Meeting Time:</td>
+          <td class="blue text-right">WHAT TIME ARE YOU MEETING:&emsp;</td>
           <td><input type="text" ng-model="event.meetingTime"/></td>
         </tr>
       </table>
-      <input type="submit" ng-click="addEvent()" class="center-block padding"/>
+      <div ng-show="form.$invalid && form.$submitted">
+        <p class="text-danger">Please fill in required fields.</p>
+      </div>
+      <input type="submit" ng-disabled="form.$invalid" ng-click="addEvent(form)"
+             class="center-block padding btn btn-default"/>
     </div>
   </form>
 </div>

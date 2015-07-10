@@ -58,7 +58,7 @@ Events.find({}).remove(function() {
     location: 'test1',
     meetingLocation: '13th kitchen',
     meetingTime: '11:15',
-    attendees: ['Joe', 'Nick', 'Zack', 'Steve'],
+    attendees: ['Joe'],
     createdBy: 'Joe'
   },
     {
@@ -69,7 +69,7 @@ Events.find({}).remove(function() {
       location: 'test2',
       meetingLocation: '12th kitchen',
       meetingTime: '11:40',
-      attendees: [],
+      attendees: ['Alan'],
       createdBy: 'Alan'
     });
 });
