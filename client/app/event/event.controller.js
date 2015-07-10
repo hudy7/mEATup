@@ -2,8 +2,11 @@
 
 angular.module('lunchApp')
   .controller('EventCtrl', function ($scope, $http, $stateParams, Auth) {
+    $scope.isLoggedIn = Auth.isLoggedIn;
+
     $http.get('/api/events/' + $stateParams.id).success(function (event) {
       $scope.event = event;
+      $scope.userIsNotAttending = event.attendees.indexOf(Auth.getCurrentUser().name) < 0;
     });
 
     $scope.signUpUser = function () {

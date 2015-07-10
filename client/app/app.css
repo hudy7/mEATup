@@ -26,6 +26,16 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: Dinot-Regular;
+  src: url('../assets/fonts/Dinot/DIN-Regular.otf');
+}
+
+@font-face {
+  font-family: Proforma-Book;
+  src: url('../assets/fonts/Proforma/Proforma-Book.otf');
+}
+
 /**
  * App-wide Styles
  */
@@ -35,4 +45,16 @@
   background: #ccc;
   color: #000;
   padding: 0.2em 0;
+}
+
+body {
+  font-family: Dinot-Regular, Arial, serif;
+}
+
+body h1 {
+  font-family: Proforma-Book, Arial, serif;
+}
+
+body h2 {
+  font-family: Proforma-Book, Arial, serif;
 }

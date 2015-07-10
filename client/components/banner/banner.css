@@ -1,0 +1,24 @@
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#header {
+  font-family: Proforma-Book, Arial, serif;
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #3A3A38;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 1, 4, .1);
+  background: #00BCE4;
+}
+
+.white {
+  color: #FFFFFF;
+}
