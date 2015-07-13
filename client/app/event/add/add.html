@@ -9,28 +9,28 @@
           </td>
         </tr>
         <tr>
-          <td class="blue text-right">DESCRIBE IT:&emsp;</td>
+          <td class="blue text-right">DESCRIBE THE EVENT:&emsp;</td>
           <td><input type="text" ng-model="event.description"/></td>
         </tr>
         <tr>
-          <td class="blue text-right">WHAT DAY IS IT:&emsp;</td>
+          <td class="blue text-right">WHAT DAY IS THE EVENT:&emsp;</td>
           <td><input type="date" ng-model="event.date" name="date" id="event-date" required/>
           </td>
         </tr>
         <tr>
-          <td class="blue text-right">WHAT TIME IS IT:&emsp;</td>
+          <td class="blue text-right">WHAT TIME WILL YOU BE AT THE LOCATION:&emsp;</td>
           <td><input type="text" ng-model="event.time" name="time" required/>
           </td>
         </tr>
         <tr>
-          <td class="blue text-right">WHERE IS IT:&emsp;</td>
+          <td class="blue text-right">WHAT IS THE LOCATION:&emsp;</td>
           <td><input type="text" ng-model="event.location" name="location" required/></td>
         </tr>
         <tr>
-          <td class="blue text-right">ARE YOU MEETING SOMEWHERE:&emsp;</td>
+          <td class="blue text-right">WHAT IS THE MEETING LOCATION (OPTIONAL):&emsp;</td>
           <td><input type="text" ng-model="event.meetingLocation"/></td>
         </tr>
-        <tr>
+        <tr ng-show="event.meetingLocation.length > 0">
           <td class="blue text-right">WHAT TIME ARE YOU MEETING:&emsp;</td>
           <td><input type="text" ng-model="event.meetingTime"/></td>
         </tr>
