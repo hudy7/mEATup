@@ -12,9 +12,7 @@ var EventsSchema = new Schema({
   meetingTime: String,
   attendees: [String],
   createdBy: String,
-  createdAt: Date
+  createdAt: {type: Date, expires: 28800}
 });
-
-EventsSchema.index({"createdAt": 1}, {expireAfterSeconds: 28800});
 
 module.exports = mongoose.model('Events', EventsSchema);
