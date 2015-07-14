@@ -14,6 +14,8 @@
           </span>
         </div>
         <div class="panel-body">
+          <span ng-show="event.meetingLocation.length > 0">&emsp;Meet at {{event.meetingLocation}} at {{event.meetingTime}}</span>
+          <br>
           <span>&emsp;{{event.description}}</span>
         </div>
       </div>

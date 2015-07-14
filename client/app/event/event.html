@@ -28,7 +28,7 @@
           </tr>
           <tr>
             <td class="blue">WHO IS GOING?</td>
-            <td><span ng-repeat="person in event.attendees"><span ng-show="$last">{{person}}</span><span ng-show="$first || $middle">{{person}}, </span> </span></td>
+            <td><span ng-repeat="person in event.attendees"><span ng-show="$last">{{person}}</span><span ng-show="($first || $middle) && !$last">{{person}}, </span> </span></td>
           </tr>
         </table>
       </div>
