@@ -6,13 +6,15 @@ var mongoose = require('mongoose'),
 var EventsSchema = new Schema({
   name: String,
   description: String,
-  date: Date,
   time: String,
   location: String,
   meetingLocation: String,
   meetingTime: String,
   attendees: [String],
-  createdBy: String
+  createdBy: String,
+  createdAt: Date
 });
+
+EventsSchema.index({"createdAt": 1}, {expireAfterSeconds: 28800});
 
 module.exports = mongoose.model('Events', EventsSchema);

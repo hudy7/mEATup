@@ -7,10 +7,9 @@ angular.module('lunchApp')
       $scope.event.createdBy = Auth.getCurrentUser().name;
       $scope.event.attendees = [];
       $scope.event.attendees.push(Auth.getCurrentUser().name);
+      $scope.event.createdAt = new Date();
       $http.post('/api/events/', $scope.event)
         .success(function () {
-          $scope.event = '';
-          $location.path('/home');
         });
     };
   });

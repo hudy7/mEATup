@@ -19,3 +19,7 @@ input {
 .css-form input.ng-valid.ng-touched {
   outline: 0 solid #FFFFFF;
 }
+
+.success-text {
+  text-align: center;
+}

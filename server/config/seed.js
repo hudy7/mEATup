@@ -37,7 +37,8 @@ Events.find({}).remove(function () {
       meetingLocation: '1st floor lobby',
       meetingTime: '11:30',
       attendees: ['Test User'],
-      createdBy: 'Test User'
+      createdBy: 'Test User',
+      createdAt: new Date()
     },
     {
       name: 'PIZZA TIME!!!',
@@ -48,6 +49,7 @@ Events.find({}).remove(function () {
       meetingLocation: '13th kitchen',
       meetingTime: '11:55',
       attendees: ['Test User'],
-      createdBy: 'Test User'
+      createdBy: 'Test User',
+      createdAt: new Date()
     });
 });
