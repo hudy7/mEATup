@@ -23,3 +23,9 @@
 .panel-default > .panel-heading {
   color: #FFFFFF;
 }
+
+.map {
+  margin-left: 15px;
+  padding-left: 12px;
+
+}

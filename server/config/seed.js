@@ -31,7 +31,6 @@ Events.find({}).remove(function () {
   Events.create({
       name: 'WALNUT WEDNESDAY!',
       description: 'LETS GET OUR FOOD TRUCK ON WITH SOME DELICIOUS TACOS!',
-      date: '2015-07-22',
       time: '11:45',
       location: 'Walnut street',
       meetingLocation: '1st floor lobby',
@@ -43,7 +42,6 @@ Events.find({}).remove(function () {
     {
       name: 'PIZZA TIME!!!',
       description: 'Lets go get vincenzas!',
-      date: '2015-07-21',
       time: '12:00',
       location: 'Vincenza\'s',
       meetingLocation: '13th kitchen',
