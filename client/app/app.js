@@ -4,7 +4,8 @@ angular.module('lunchApp', [
   'ngCookies',
   'ngResource',
   'ngSanitize',
-  'ui.router'
+  'ui.router',
+  'ngMap'
 ])
   .config(function ($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
     $urlRouterProvider
