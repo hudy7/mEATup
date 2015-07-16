@@ -19,7 +19,10 @@
         </tr>
         <tr>
           <td class="blue text-right">WHAT IS THE LOCATION:&emsp;</td>
-          <td><input type="text" ng-model="event.location" name="location" required/></td>
+          <td>
+            <input places-auto-complete ng-model="event.placeID"  types="['establishment']" />
+            <!--input type="text" ng-model="event.location" name="location" required/-->
+          </td>
         </tr>
         <tr>
           <td class="blue text-right">WHERE ARE WE MEETING (OPTIONAL):&emsp;</td>

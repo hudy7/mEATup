@@ -13,6 +13,7 @@ var EventsSchema = new Schema({
   attendees: [String],
   createdBy: String,
   createdAt: { type: Date, expires: 28800, default: Date.now },
+  placeID: String
 
 });
 
