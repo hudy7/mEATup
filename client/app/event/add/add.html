@@ -20,7 +20,10 @@
         </tr>
         <tr>
           <td class="blue text-right">WHAT IS THE LOCATION:&emsp;</td>
-          <td><input type="text" ng-model="event.location" name="location" required/></td>
+          <td>
+            <input places-auto-complete on-place-changed="placeChanged()" types="['establishment']" />
+            <!--input type="text" ng-model="event.location" name="location" required/-->
+          </td>
         </tr>
         <tr>
           <td class="blue text-right">WHERE ARE WE MEETING (OPTIONAL):&emsp;</td>
@@ -71,3 +74,6 @@
   <p>Form submitted successfully.</p>
   <a href="/home" class="btn btn-default">Go Home</a>
 </div>
+
+
+{{event.placeID}}
