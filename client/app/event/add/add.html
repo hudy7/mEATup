@@ -2,6 +2,7 @@
   <form novalidate name="form" class="css-form">
     <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
     <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+      <h1>Enter a new lunch event!</h1>
       <table class="center-table">
         <tr>
           <td class="blue text-right">WHATS THE EVENT CALLED:&emsp;</td>
@@ -33,12 +34,38 @@
       <div ng-show="form.$invalid && form.$submitted">
         <p class="text-danger">Please fill in required fields.</p>
       </div>
-      <input type="submit" ng-disabled="form.$invalid" ng-click="addEvent(form)" class="center-block padding btn btn-default"/>
+      <input type="submit" ng-disabled="form.$invalid" ng-click="addEvent(form)"
+             class="center-block padding btn btn-default"/>
     </div>
   </form>
 </div>
 
-<div class="container success-text" ng-show="form.$valid && form.$submitted">
-  <p >Form submitted successfully.</p>
+<div class="container" ng-hide="form2.$valid && form2.$submitted">
+  <form novalidate name="form2" class="css-form">
+    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
+    <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
+      <h1>Enter a new deal/free food!</h1>
+      <table class="center-table">
+        <tr>
+          <td class="blue text-right">NAME:&emsp;</td>
+          <td><input type="text" ng-model="deal.name" name="name" required/>
+          </td>
+        </tr>
+        <tr>
+          <td class="blue text-right">DESCRIPTION:&emsp;</td>
+          <td><input type="text" ng-model="deal.description"/></td>
+        </tr>
+        <tr>
+          <td class="blue text-right">DOES THIS EVENT EXPIRE:&emsp;</td>
+          <td><input type="checkbox" ng-model="deal.expires" name="time" required/>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </form>
+</div>
+
+<div class="container success-text" ng-show="(form.$valid && form.$submitted) || (form2.$valid && form2.$submitted) ">
+  <p>Form submitted successfully.</p>
   <a href="/home" class="btn btn-default">Go Home</a>
 </div>
