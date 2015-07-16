@@ -6,6 +6,7 @@ angular.module('lunchApp')
     $scope.addEvent = function () {
       $scope.event.createdBy = Auth.getCurrentUser().name;
       $scope.event.createdByEmail = Auth.getCurrentUser().email;
+      $scope.event.placeID = $scope.place.place_id;
       $scope.event.attendees = [];
       $scope.event.attendees.push(Auth.getCurrentUser().name);
       $scope.event.createdAt = new Date();
@@ -22,5 +23,9 @@ angular.module('lunchApp')
       else {
         $http.post('/api/deals/', $scope.deal);
       }
+    }
+
+    $scope.placeChanged = function() {
+      $scope.place = this.getPlace();
     }
   });
