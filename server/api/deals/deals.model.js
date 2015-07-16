@@ -5,8 +5,7 @@ var mongoose = require('mongoose'),
 
 var DealsSchema = new Schema({
   name: String,
-  description: String,
-  expires: Boolean
+  description: String
 });
 
 module.exports = mongoose.model('Deals', DealsSchema);
