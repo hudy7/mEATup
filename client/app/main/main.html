@@ -1,6 +1,5 @@
 <div class="container">
   <h1>Upcoming lunches:</h1>
-
   <div class="container">
     <div ng-repeat="event in events | orderBy: ['date','time']">
       <div class="panel panel-default">
@@ -20,11 +19,28 @@
       </div>
     </div>
   </div>
-
-  <div class = "map">
-    <map center="41.500491, -81.688635" zoom="16"></map>
-
-  </div>
-
 </div>
 
+<div class="container">
+  <div class="map">
+    <map center="41.500491, -81.688635" zoom="16"></map>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Deals and free food:</h1>
+  <div class="container">
+    <div ng-repeat="deal in deals">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <span>
+            <a class="h2">{{deal.name}}</a>
+          </span>
+        </div>
+        <div class="panel-body">
+          <span>&emsp;{{deal.description}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
