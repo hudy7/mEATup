@@ -1,20 +1,32 @@
-<div class="container">
-  <h1>Upcoming lunches:</h1>
-  <div class="container">
-    <div ng-repeat="event in events | orderBy: ['date','time']">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <span>
-            <a class="h2" ng-href="/event/{{event._id}}">{{event.name}}</a>
-            &emsp;WHERE: {{event.location}}
-            &emsp;TIME: {{event.time}}
-            &emsp;CREATED BY: {{event.createdBy}}
-          </span>
+<div class="container-fluid">
+
+  <div class="row events-heading">
+    <span class="left-float">EVENTS&emsp;</span><span class="green-rect"></span>
+  </div>
+
+  <div class="row events-list">
+
+    <div class="charcoal-div" ng-repeat="event in events | orderBy: ['date','time']">
+      <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 white-line">
+          <p class="green-date">{{today | date: "M/d"}}</p>
+
+          <p>{{event.name}}</p>
         </div>
-        <div class="panel-body">
-          <span ng-show="event.meetingLocation.length > 0">&emsp;Meet at {{event.meetingLocation}} at {{event.meetingTime}}</span>
-          <br>
-          <span>&emsp;{{event.description}}</span>
+        <div class="col-xs-0 col-sm-8 col-md-8 col-lg-8 event-center">
+          <p class="h4">{{event.description}}</p>
+
+          <p>
+            Time: {{event.time}} <br>
+            Event Location: {{event.location}} <br>
+            Meeting Location: {{event.meetingLocation}} at {{event.meetingTime}}
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <p class="event-right">
+            <img src="../../assets/images/pizzaIcon.png"/> <br/>
+            <a class="btn btn-default" style="margin-top: 10px; color: #7cbb42;">SIGN ME UP!</a>
+          </p>
         </div>
       </div>
     </div>
@@ -30,20 +42,20 @@
   </div>
 </div>
 
-<div class="container">
-  <h1>Deals and free food:</h1>
-  <div class="container">
-    <div ng-repeat="deal in deals">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <span>
-            <a class="h2">{{deal.name}}</a>
-          </span>
-        </div>
-        <div class="panel-body">
-          <span>&emsp;{{deal.description}}</span>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+<!--<div class="container">-->
+<!--<h1>Deals and free food:</h1>-->
+<!--<div class="container">-->
+<!--<div ng-repeat="deal in deals">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<span>-->
+<!--<a class="h2">{{deal.name}}</a>-->
+<!--</span>-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<span>&emsp;{{deal.description}}</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->

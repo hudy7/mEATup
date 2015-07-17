@@ -2,6 +2,7 @@
 
 angular.module('lunchApp')
   .controller('MainCtrl', function ($scope, $http) {
+    $scope.today = new Date();
     $scope.events = [];
     $scope.deals = [];
 
