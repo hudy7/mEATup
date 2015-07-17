@@ -29,8 +29,10 @@ angular.module('lunchApp')
     $scope.deleteThing = function (thing) {
       $http.delete('/api/things/' + thing._id);
     };
-    $scope.dropMarker = function (place){
 
+    $scope.populateDetails = function (event){
+      console.log("tetx", this.title);
+      $scope.details = this.title.toString();
 
     };
   });

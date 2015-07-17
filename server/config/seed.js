@@ -41,7 +41,13 @@ Events.find({}).remove(function () {
       createdBy: 'Test User',
       createdAt: new Date(),
       lat: '41.503192',
-      long:  '-81.690916'
+      long:  '-81.690916',
+      phone: '(607)-787-3223',
+      price: '3',
+      rating: '3.5',
+      website: 'test.com',
+      addressHTML: 'html address',
+      address: "500 West Street Clair Avenue, Cleveland, OH 44113, United States"
     },
     {
       name: 'PIZZA TIME!!!',
@@ -54,7 +60,13 @@ Events.find({}).remove(function () {
       createdBy: 'Test User',
       createdAt: new Date(),
       lat: '41.496322',
-      long:  '-81.692944'
+      long:  '-81.692944',
+      phone: '(607)-787-3223',
+      price: '3',
+      rating: '3.5',
+      website: 'test.com',
+      addressHTML: 'html address',
+      address: "500 West Street Clair Avenue, Cleveland, OH 44113, United States"
     });
 });
 

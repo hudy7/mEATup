@@ -33,12 +33,39 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="map">
-    <map center="41.500491, -81.688635" zoom="16">
-      <marker ng-repeat="event in events" position="{{event.lat}},{{event.long}}" on-click="myfunc()">
-      </marker>
-    </map>
+<div class="container map">
+  <div class="map"  >
+    <span style="width:50%; float:left;">
+      <map center="41.500491, -81.688635" zoom="14">
+        <marker ng-repeat="event in events"
+                position="{{event.lat}},{{event.long}}"
+                title= "<div class=&quot;locationTitle&quot;>{{event.location}}</div>
+                        <div class=&quot;locationBar&quot;></div>
+                        <div class=&quot;locationDetails&quot;>
+                          <img  src=&quot;../../assets/images/phoneIcon.png&quot;/>
+                          <div>{{event.phone}}</div>
+                          <img  src=&quot;../../assets/images/webIcon.png&quot;/>
+                          <div>{{event.website}}</div>
+                          <img  src=&quot;../../assets/images/greenMoneyIcons.png&quot;/>
+                          <div>{{event.rating}}/5</div>
+                        </div>"
+                on-click="populateDetails()">
+        </marker>
+      </map>
+    </span>
+    <span style="float:right;">
+      <div ng-bind-html="details"></div>
+      <!--<div class="locationTitle">{{event.location}}</div>
+      <div class="locationBar"></div>
+      <div class="locationDetails">
+        <img  src="../../assets/images/phoneIcon.png"/>
+        <div>{{event.phone}}</div>
+        <img  src="../../assets/images/webIcon.png"/>
+        <div>{{event.website}}</div>
+        <img  src="../../assets/images/greenMoneyIcons.png"/>
+        <div>{{event.rating}}/5</div>
+      </div>-->
+    </span>
   </div>
 </div>
 

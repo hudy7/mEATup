@@ -64,6 +64,29 @@
 }
 
 .map {
+  background-color: #3a3a38;
   margin-left: 15px;
   padding-left: 12px;
+}
+
+.locationTitle {
+  font-family: Dinot-Bold, Arial, serif;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.locationDetails{
+  font-family: Dinot-Medium, Arial, serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+}
+
+.locationBar{
+  height: 4px;
+  background-color:#f96f0e;
+  text-align: center;
+  margin-bottom: 6px;
 }
