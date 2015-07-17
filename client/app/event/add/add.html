@@ -2,7 +2,7 @@
   <div class="row section-heading">
     <span class="left-float">CREATE EVENTS&emsp;</span><span class="green-rect"></span>
   </div>
-  <form novalidate name="form" class="css-form">
+  <form novalidate name="form" class="css-form row">
     <div class="container-fluid add-form">
       <div class="charcoal">
         <p>
@@ -54,12 +54,12 @@
   </form>
 </div>
 
-<div class="container=fluid add-form" ng-hide="form2.$valid && form2.$submitted">
+<div class="container=fluid " ng-hide="form2.$valid && form2.$submitted">
   <div class="row section-heading">
     <span class="left-float">CREATE FREEBIE/DEAL&emsp;</span><span class="green-rect"></span>
   </div>
-  <form novalidate name="form2" class="css-form">
-    <div class="container-fluid add-form">
+  <form novalidate name="form2" class="css-form row">
+    <div class="container-fluid add-form ">
       <div class="charcoal">
         <p>
           &nbsp;
@@ -71,17 +71,17 @@
 
         <p>
           <label>Event Description:&emsp;</label>
-          <input type="text" ng-model="deal.description" name="time" required/>
+          <input type="text" ng-model="deal.description" name="description" required/>
         </p>
 
         <p>
-          <label>Expires?:&emsp;</label>
-          <input type="checkbox" ng-model="deal.expires" name="time" required/>
+          <label>Expires:&emsp;</label>
+          <input type="checkbox" ng-model="deal.expires" name="expires" />
         </p>
 
 
-        <input class="sbtn" type="submit" ng-disabled="form.$invalid" style="padding-bottom: 10px;"
-               ng-click="addEvent(form)"/>
+        <input class="sbtn" type="submit" ng-disabled="form2.$invalid" style="padding-bottom: 10px;"
+               ng-click="addDeal(form2)"/>
 
         <p>
           &nbsp;

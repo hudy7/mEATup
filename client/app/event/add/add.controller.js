@@ -20,16 +20,23 @@ angular.module('lunchApp')
       $scope.event.locationName = $scope.place.name;
       $http.post('/api/events/', $scope.event)
         .success(function () {
+          $location.path('/');
         });
     };
 
     $scope.addDeal = function() {
       $scope.deal.createdByEmail = Auth.getCurrentUser().email;
       if ($scope.deal.expires) {
-        $http.post('/api/deals/expires/', $scope.deal);
+        $http.post('/api/deals/expires/', $scope.deal)
+          .success(function () {
+            $location.path('/');
+        });
       }
       else {
-        $http.post('/api/deals/', $scope.deal);
+        $http.post('/api/deals/', $scope.deal)
+          .success(function () {
+            $location.path('/');
+          });
       }
     };
 
