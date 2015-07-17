@@ -71,17 +71,17 @@
 
         <p>
           <label>Event Description:&emsp;</label>
-          <input type="text" ng-model="deal.description" name="time" required/>
+          <input type="text" ng-model="deal.description" name="description" required/>
         </p>
 
         <p>
           <label>Expires:&emsp;</label>
-          <input type="checkbox" ng-model="deal.expires" name="time" required/>
+          <input type="checkbox" ng-model="deal.expires" name="expires" />
         </p>
 
 
-        <input class="sbtn" type="submit" ng-disabled="form.$invalid" style="padding-bottom: 10px;"
-               ng-click="addEvent(form)"/>
+        <input class="sbtn" type="submit" ng-disabled="form2.$invalid" style="padding-bottom: 10px;"
+               ng-click="addDeal(form2)"/>
 
         <p>
           &nbsp;
