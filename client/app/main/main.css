@@ -89,6 +89,10 @@
   margin-top: 5px;
 }
 
+.locationDetails a {
+  color: white;
+}
+
 .locationBar {
   height: 4px;
   background-color: #f96f0e;
