@@ -21,11 +21,12 @@
 .pad-img {
   padding-right: 10px;
 }
+
 .logo {
   position: fixed;
   left: 0;
   right: 0;
-  top: -25px;
+  top: -24px;
   z-index: 10;
   margin: 0;
   margin-left: auto;
@@ -34,6 +35,12 @@
   text-align: center;
 }
 
-.field {
-  height: 232px;
+.navbar-default .navbar-nav .open .dropdown-menu > li > a, .navbar-default .navbar-nav .open .dropdown-menu {
+  background-color: #3a3a38;
+  color: #ffffff;
+}
+
+.image-div {
+  height: 140px;
+  width: 196px;
 }
