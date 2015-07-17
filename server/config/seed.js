@@ -43,12 +43,12 @@ Events.find({}).remove(function () {
       createdAt: new Date(),
       lat: '41.503192',
       long:  '-81.690916',
-      phone: '(607)-787-3223',
+      phone: '(216)-747-3223',
       price: '3',
-      rating: '3.5',
-      website: 'test.com',
+      rating: '4.6',
+      website: 'walnutstreet.com',
       addressHTML: 'html address',
-      address: "500 West Street Clair Avenue, Cleveland, OH 44113, United States"
+      address: "500 Euclid Ave, Cleveland, OH 44113, United States"
     },
     {
       name: 'PIZZA TIME!!!',
@@ -63,10 +63,10 @@ Events.find({}).remove(function () {
       createdAt: new Date(),
       lat: '41.496322',
       long:  '-81.692944',
-      phone: '(607)-787-3223',
+      phone: '(216)-787-3223',
       price: '3',
-      rating: '3.5',
-      website: 'test.com',
+      rating: '2',
+      website: 'Vincenzas.com',
       addressHTML: 'html address',
       address: "500 West Street Clair Avenue, Cleveland, OH 44113, United States"
     });
