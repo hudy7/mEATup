@@ -3,9 +3,40 @@
   background-color: #3B5998;
   border-color: #133783;
 }
-
+.form{
+  margin-left: 0px;
+  margin-right: 0px;
+  width: 102.5%;
+}
 .btn-github {
   color: #fff;
   background-color: #fafafa;
   border-color: #ccc;
+}
+p label {
+  font-family: Dinot-Medium, Arial, serif;
+  display: inline-block;
+  width: 10%;
+  color: #7cbb42;
+  margin-left: 5%;
+}
+p input {
+  width: 80%;
+}
+
+.charcoal-bg {
+  background-color: #3a3a38;
+  height: 560px;
+  width: 100%;
+  margin-left: 0;
+  padding: 0;
+}
+
+.charcoal-div {
+  background-color: #3a3a38;
+  color: white;
+  margin-left: 0;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 10px;
 }
