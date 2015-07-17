@@ -1,7 +1,17 @@
+.events-heading {
+  font-family: Dinot-Black, Arial, serif;
+  font-size: 30px;
+  line-height: 30px;
+  margin-left: 55px;
+  margin-top: 50px;
+  margin-right: 55px;
+  margin-bottom: 10px;
+}
 
 .center-table {
-  margin: 0 auto !important;
-  float: none !important;
+  text-align: center
+  background-color:#3a3a38;
+  color: #7cbb42
 }
 
 td {
@@ -22,4 +32,8 @@ input {
 
 .success-text {
   text-align: center;
+}
+
+.text-box {
+  width: 500px;
 }

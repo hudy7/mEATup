@@ -1,37 +1,38 @@
 <div class="container" ng-hide="form.$valid && form.$submitted">
   <form novalidate name="form" class="css-form">
     <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
-    <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
-      <h1>Enter a new lunch event!</h1>
+    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
+      <div id="addEvent" class="row events-heading">
+        <span class="left-float">CREATE EVENTS&emsp;</span><span class="green-rect"></span>
+      </div>
       <table class="center-table">
         <tr>
-          <td class="blue text-right">WHATS THE EVENT CALLED:&emsp;</td>
-          <td><input type="text" ng-model="event.name" name="name" required/>
+          <td class=" text-right">Event Name:&emsp;</td>
+          <td><input class="text-box" type="text" ng-model="event.name" name="name" required/>
           </td>
         </tr>
         <tr>
-          <td class="blue text-right">DESCRIBE THE EVENT:&emsp;</td>
-          <td><input type="text" ng-model="event.description"/></td>
-        </tr>
-        <tr>
-          <td class="blue text-right">WHAT TIME WILL YOU BE AT THE LOCATION:&emsp;</td>
-          <td><input type="text" ng-model="event.time" name="time" required/>
-          </td>
-        </tr>
-        <tr>
-          <td class="blue text-right">WHAT IS THE LOCATION:&emsp;</td>
+          <td class=" text-right">Event Location:&emsp;</td>
           <td>
-            <input places-auto-complete on-place-changed="placeChanged()" types="['establishment']" />
-            <!--input type="text" ng-model="event.location" name="location" required/-->
+            <input class="text-box" places-auto-complete on-place-changed="placeChanged()" types="['establishment']" />
           </td>
         </tr>
         <tr>
-          <td class="blue text-right">WHERE ARE WE MEETING (OPTIONAL):&emsp;</td>
-          <td><input type="text" ng-model="event.meetingLocation"/></td>
+          <td class=" text-right">Event Description:&emsp;</td>
+          <td><input class="text-box" type="text" ng-model="event.description" name="time" required/>
+          </td>
+        </tr>
+        <tr>
+          <td class=" text-right">Event Time:&emsp;</td>
+          <td><input class="text-box" type="text" ng-model="event.time"/></td>
+        </tr>
+        <tr>
+          <td class=" text-right">Meeting Location:&emsp;</td>
+          <td><input class="text-box" type="text" ng-model="event.meetingLocation"/></td>
         </tr>
         <tr ng-show="event.meetingLocation.length > 0">
-          <td class="blue text-right">WHAT TIME ARE YOU MEETING:&emsp;</td>
-          <td><input type="text" ng-model="event.meetingTime"/></td>
+          <td class=" text-right">Meeting Time:&emsp;</td>
+          <td><input class="text-box" type="text" ng-model="event.meetingTime"/></td>
         </tr>
       </table>
       <div ng-show="form.$invalid && form.$submitted">
@@ -47,20 +48,22 @@
   <form novalidate name="form2" class="css-form">
     <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
     <div class="col-xs-8 col-sm-8 col-md-6 col-lg-6">
-      <h1>Enter a new deal/free food!</h1>
+      <div id="addDeal" class="row events-heading">
+        <span class="left-float">FREEBIES & DEALS&emsp;</span><span class="green-rect"></span>
+      </div>
       <table class="center-table">
         <tr>
-          <td class="blue text-right">NAME:&emsp;</td>
-          <td><input type="text" ng-model="deal.name" name="name" required/>
+          <td class=" text-right">NAME:&emsp;</td>
+          <td><input class="text-box" type="text" ng-model="deal.name" name="name" required/>
           </td>
         </tr>
         <tr>
-          <td class="blue text-right">DESCRIPTION:&emsp;</td>
-          <td><input type="text" ng-model="deal.description"/></td>
+          <td class=" text-right">DESCRIPTION:&emsp;</td>
+          <td><input class="text-box" type="text" ng-model="deal.description"/></td>
         </tr>
         <tr>
-          <td class="blue text-right">DOES THIS EVENT EXPIRE:&emsp;</td>
-          <td><input type="checkbox" ng-model="deal.expires" name="time" required/>
+          <td class="text-right">DOES THIS EVENT EXPIRE:&emsp;</td>
+          <td><input class="text-box" type="checkbox" ng-model="deal.expires" name="time" required/>
           </td>
         </tr>
       </table>
