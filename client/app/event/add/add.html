@@ -1,85 +1,92 @@
-<div class="container" ng-hide="form.$valid && form.$submitted">
+<div class="container=fluid" ng-hide="form.$valid && form.$submitted">
+  <div class="row section-heading">
+    <span class="left-float">CREATE EVENTS&emsp;</span><span class="green-rect"></span>
+  </div>
   <form novalidate name="form" class="css-form">
-    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8 center">
-      <div  class="row events-heading">
-        <span class="left-float">CREATE EVENTS&emsp;</span><span class="green-rect"></span>
-      </div>
-      <div class="create-events">
-        <table class="center-table">
-          <tr>
-            <td class=" text-right">Event Name:&emsp;</td>
-            <td><input class="text-box" type="text" ng-model="event.name" name="name" required/>
-            </td>
-          </tr>
-          <tr>
-            <td class=" text-right">Event Location:&emsp;</td>
-            <td>
-              <input class="text-box" places-auto-complete on-place-changed="placeChanged()" types="['establishment']" />
-            </td>
-          </tr>
-          <tr>
-            <td class=" text-right">Event Description:&emsp;</td>
-            <td><input class="text-box" type="text" ng-model="event.description" name="time" required/>
-            </td>
-          </tr>
-          <tr>
-            <td class=" text-right">Event Time:&emsp;</td>
-            <td><input class="text-box" type="text" ng-model="event.time"/></td>
-          </tr>
-          <tr>
-            <td class=" text-right">Meeting Location:&emsp;</td>
-            <td><input class="text-box" type="text" ng-model="event.meetingLocation"/></td>
-          </tr>
-          <tr ng-show="event.meetingLocation.length > 0">
-            <td class=" text-right">Meeting Time:&emsp;</td>
-            <td><input class="text-box" type="text" ng-model="event.meetingTime"/></td>
-          </tr>
-        </table>
+    <div class="container-fluid add-form">
+      <div class="charcoal">
+        <p>
+          &nbsp;
+        </p>
+        <p>
+          <label>Event Name:&emsp;</label>
+          <input type="text" ng-model="event.name" name="name" required/>
+        </p>
+
+        <p>
+          <label>Event Location:&emsp;</label>
+          <input places-auto-complete on-place-changed="placeChanged()" types="['establishment']"/>
+        </p>
+
+        <p>
+          <label>Event Description:&emsp;</label>
+          <input type="text" ng-model="event.description" name="time" required/>
+        </p>
+
+        <p>
+          <label>Event Time:&emsp;</label>
+          <input type="text" ng-model="event.time"/>
+        </p>
+
+        <p>
+          <label>Meeting Location:&emsp;</label>
+          <input type="text" ng-model="event.meetingLocation"/>
+        </p>
+
+        <p>
+          <label>Meeting Time:&emsp;</label>
+          <input type="text" ng-model="event.meetingTime"/>
+        </p>
+
         <div ng-show="form.$invalid && form.$submitted">
           <p class="text-danger">Please fill in required fields.</p>
         </div>
-        <input type="submit" ng-disabled="form.$invalid" ng-click="addEvent(form)"/>
+
+        <input class="sbtn" type="submit" ng-disabled="form.$invalid" style="padding-bottom: 10px;"
+               ng-click="addEvent(form)"/>
+
+
+        <p>
+          &nbsp;
+        </p>
       </div>
     </div>
   </form>
 </div>
 
-<div class="container" ng-hide="form2.$valid && form2.$submitted">
+<div class="container=fluid add-form" ng-hide="form2.$valid && form2.$submitted">
+  <div class="row section-heading">
+    <span class="left-float">CREATE FREEBIE/DEAL&emsp;</span><span class="green-rect"></span>
+  </div>
   <form novalidate name="form2" class="css-form">
-    <div class="col-lg-3 col-md-3 col-sm-2 col-xs-2">&nbsp;</div>
-    <div class="col-xs-12 col-sm-10 col-md-8 col-lg-8">
-      <div id="addDeal" class="row events-heading">
-        <span class="left-float">FREEBIES & DEALS&emsp;</span><span class="green-rect"></span>
-      </div>
-      <div class="create-events">
-        <table >
-          <tr>
-            <td class=" text-right">NAME:&emsp;</td>
-            <td><input class="text-box" type="text" ng-model="deal.name" name="name" required/>
-            </td>
-          </tr>
-          <tr>
-            <td class=" text-right">DESCRIPTION:&emsp;</td>
-            <td><input class="text-box" type="text" ng-model="deal.description"/></td>
-          </tr>
-          <tr>
-            <td class="text-right">DOES THIS EVENT EXPIRE:&emsp;</td>
-            <td><input class="text-box" type="checkbox" ng-model="deal.expires" name="time" required/>
-            </td>
-          </tr>
-        </table>
-        <input type="submit" ng-disabled="form.$invalid" ng-click="addDeal()"
-               class="center-block padding btn btn-default"/>
+    <div class="container-fluid add-form">
+      <div class="charcoal">
+        <p>
+          &nbsp;
+        </p>
+        <p>
+          <label>Event Name:&emsp;</label>
+          <input type="text" ng-model="deal.name" name="name" required/>
+        </p>
+
+        <p>
+          <label>Event Description:&emsp;</label>
+          <input type="text" ng-model="deal.description" name="time" required/>
+        </p>
+
+        <p>
+          <label>Expires?:&emsp;</label>
+          <input type="checkbox" ng-model="deal.expires" name="time" required/>
+        </p>
+
+
+        <input class="sbtn" type="submit" ng-disabled="form.$invalid" style="padding-bottom: 10px;"
+               ng-click="addEvent(form)"/>
+
+        <p>
+          &nbsp;
+        </p>
       </div>
     </div>
   </form>
 </div>
-
-<div class="container success-text" ng-show="(form.$valid && form.$submitted) || (form2.$valid && form2.$submitted) ">
-  <p>Form submitted successfully.</p>
-  <a href="/home" class="btn btn-default">Go Home</a>
-</div>
-
-
-{{place}}

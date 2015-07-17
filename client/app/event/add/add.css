@@ -1,4 +1,4 @@
-.events-heading {
+.section-heading {
   font-family: Dinot-Black, Arial, serif;
   font-size: 30px;
   line-height: 30px;
@@ -8,21 +8,32 @@
   margin-bottom: 10px;
 }
 
-.create-events {
+p label {
+  font-family: Dinot-Medium, Arial, serif;
+  display: inline-block;
+  width: 10%;
+  color: #7cbb42;
+  margin-left: 5%;
+}
+p input {
+  width: 80%;
+}
+
+.charcoal > p {
+  margin-top: 10px;
+}
+
+.add-form {
+  margin-left: 55px;
+  margin-right: 55px;
+}
+
+.sbtn {
   text-align: center;
-  background-color:#3a3a38;
-  color: #7cbb42
-}
-
-.submit-button{
-  float:right;
-}
-td {
-  padding-top: 5px;
-}
-
-input {
-  margin-top: 5px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
 }
 
 .css-form input.ng-invalid.ng-touched {
@@ -37,6 +48,7 @@ input {
   text-align: center;
 }
 
-.text-box {
-  width: 500px;
+.charcoal {
+  background-color: #3a3a38;
 }
+
