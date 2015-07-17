@@ -39,7 +39,9 @@ Events.find({}).remove(function () {
       meetingTime: '11:30',
       attendees: ['Test User'],
       createdBy: 'Test User',
-      createdAt: new Date()
+      createdAt: new Date(),
+      lat: '41.503192',
+      long:  '-81.690916'
     },
     {
       name: 'PIZZA TIME!!!',
@@ -50,7 +52,9 @@ Events.find({}).remove(function () {
       meetingTime: '11:55',
       attendees: ['Test User'],
       createdBy: 'Test User',
-      createdAt: new Date()
+      createdAt: new Date(),
+      lat: '41.496322',
+      long:  '-81.692944'
     });
 });
 

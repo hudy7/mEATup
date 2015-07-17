@@ -23,7 +23,10 @@
 
 <div class="container">
   <div class="map">
-    <map center="41.500491, -81.688635" zoom="16"></map>
+    <map center="41.500491, -81.688635" zoom="16">
+      <marker ng-repeat="event in events" position="{{event.lat}},{{event.long}}" on-click="myfunc()">
+      </marker>
+    </map>
   </div>
 </div>
 

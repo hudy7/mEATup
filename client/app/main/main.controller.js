@@ -28,4 +28,8 @@ angular.module('lunchApp')
     $scope.deleteThing = function (thing) {
       $http.delete('/api/things/' + thing._id);
     };
+    $scope.dropMarker = function (place){
+
+
+    };
   });
