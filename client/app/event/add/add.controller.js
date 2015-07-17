@@ -30,9 +30,9 @@ angular.module('lunchApp')
       else {
         $http.post('/api/deals/', $scope.deal);
       }
-    }
+    };
 
     $scope.placeChanged = function() {
       $scope.place = this.getPlace();
-    }
+    };
   });

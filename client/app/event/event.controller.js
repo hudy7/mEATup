@@ -12,5 +12,5 @@ angular.module('lunchApp')
     $scope.signUpUser = function () {
       $scope.event.attendees = [Auth.getCurrentUser().name];
       $http.put('/api/events/' + $stateParams.id, $scope.event);
-    }
+    };
   });
