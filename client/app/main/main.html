@@ -55,9 +55,9 @@
                             <br><img  src=&quot;../../assets/images/phoneIcon.png&quot;/>
                             <br><div>{{event.phone}}</div>
                             <br><img  src=&quot;../../assets/images/webIcon.png&quot;/>
-                            <br><div><a href=&quot;{{event.website}}&quot;>{{event.website}}</div>
-                            <br><img  src=&quot;../../assets/images/personIcon.png&quot;/>
-                            <br><div>{{event.rating}} / 5</div>
+                            <br><div><a style=&quot;color:white;&quot; href=&quot;{{event.website}}&quot;>{{event.website}}</div>
+                            <br>{{generateStars(event.rating)}}
+                            <br><div>{{event.rating}} of 5</div>
                           </div>"
                     on-click="populateDetails()">
             </marker>

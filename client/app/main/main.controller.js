@@ -46,4 +46,18 @@ angular.module('lunchApp')
       $scope.details = this.title.toString();
     };
 
+    $scope.generateStars = function (stars){
+      var full = "\<img src=\";../../assets/images/fullStarIcon.png\"/>";
+      var half = "\<img src=\"../../assets/images/halfStarIcon.png\"/>";
+      var html = "";
+      while (stars >= 1){
+        html = html + full;
+        stars = stars - 1;
+      }
+      if (stars >= 0.5){
+        html = html + half;
+      }
+      return html;
+    }
+
   });
