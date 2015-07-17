@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('lunchApp')
-  .controller('MainCtrl', function ($scope, $http, $timeout) {
+  .controller('MainCtrl', function ($scope, $http, $stateParams, $state, Auth, $timeout) {
     $scope.today = new Date();
     $scope.events = [];
     $scope.deals = [];
@@ -18,6 +18,16 @@ angular.module('lunchApp')
     $http.get('/api/deals/expires').success(function (deals) {
       $scope.deals = $scope.deals.concat(deals);
     });
+
+    $scope.signUpUser = function (req) {
+      $http.get('/api/events/' + req._id).success(function (ev) {
+        $scope.sendme = ev;
+        $scope.sendme.attendees = [Auth.getCurrentUser().name];
+        $http.put('/api/events/' + $scope.sendme._id, $scope.sendme).success(function(res) {
+          $state.go($state.current, {}, {reload: true});
+        });
+      });
+    };
 
     $scope.addThing = function () {
       if ($scope.newThing === '') {

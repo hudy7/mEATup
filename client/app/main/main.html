@@ -19,13 +19,14 @@
           <p>
             Time: {{event.time}} <br>
             Event Location: {{event.location}} <br>
-            Meeting Location: {{event.meetingLocation}} at {{event.meetingTime}}
+            Meeting Location: {{event.meetingLocation}} at {{event.meetingTime}} <br>
+            Attendees: <span ng-repeat="person in event.attendees"><span ng-show="$last">{{person}}</span><span ng-show="($first || $middle) && !$last">{{person}}, </span> </span>
           </p>
         </div>
         <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
           <p class="event-right">
             <img src="../../assets/images/plateIcon.png"/> <br/>
-            <a class="btn btn-default" style="margin-top: 10px; color: #7cbb42;">SIGN ME UP!</a>
+            <a class="btn btn-default" ng-click="signUpUser(event)" style="margin-top: 10px; color: #7cbb42;">SIGN ME UP!</a>
           </p>
         </div>
       </div>
