@@ -19,7 +19,7 @@
           <p>
             Time: {{event.time}} <br>
             Event Location: {{event.locationName}} <br>
-            Meeting Location: {{event.meetingLocation}} at {{event.meetingTime}} <br>
+            <span ng-show="event.meetingTime.length > 0">Meeting Location: {{event.meetingLocation}} at {{event.meetingTime}}</span> <br>
             Attendees: <span ng-repeat="person in event.attendees"><span ng-show="$last">{{person}}</span><span ng-show="($first || $middle) && !$last">{{person}}, </span> </span>
           </p>
         </div>
