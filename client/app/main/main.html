@@ -43,17 +43,18 @@
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
         <div class="map-margin">
           <map center="41.500491, -81.688635" zoom="14">
-            <marker ng-repeat="event in events"
+            <marker id="pin" ng-repeat="event in events"
                     position="{{event.lat}},{{event.long}}"
                     title="<div class=&quot;locationTitle&quot;>{{event.location}}</div>
                           <div class=&quot;locationBar&quot;></div>
                           <div class=&quot;locationDetails&quot;>
-                            <img  src=&quot;../../assets/images/phoneIcon.png&quot;/>
-                            <div>{{event.phone}}</div>
-                            <img  src=&quot;../../assets/images/webIcon.png&quot;/>
-                            <div>{{event.website}}</div>
-                            <img  src=&quot;../../assets/images/greenMoneyIcons.png&quot;/>
-                            <div>{{event.rating}}/5</div>
+                            <br><div>{{event.address}}</div>
+                            <br><img  src=&quot;../../assets/images/phoneIcon.png&quot;/>
+                            <br><div>{{event.phone}}</div>
+                            <br><img  src=&quot;../../assets/images/webIcon.png&quot;/>
+                            <br><div>{{event.website}}</div>
+                            <br><img  src=&quot;../../assets/images/personIcon.png&quot;/>
+                            <br><div>{{event.rating}} / 5</div>
                           </div>"
                     on-click="populateDetails()">
             </marker>
@@ -61,7 +62,22 @@
         </div>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <span class="white" ng-bind-html="details"></span>
+        <span ng-show="detailsClicked" class="white" ng-bind-html="details"></span>
+        <span ng-hide="detailsClicked" class="white">
+          <div class="locationDetails">
+
+            <div class="locationTitle">SELECT A LOCATION</div>
+            <div class="locationBar"></div>
+            <br><img src="../../assets/images/arrowIcon.png"/>
+            <br><div>CLICK</div>
+            <br><img src="../../assets/images/searchIcon.png"/>
+            <br><div>VIEW</div>
+            <br><img src="../../assets/images/webIcon.png"/>
+            <br><div>VISIT</div>
+            <br><img src="../../assets/images/personIcon.png"/>
+            <br> <div>INVITE FRIENDS</div>
+          </div>
+        </span>
       </div>
     </div>
 

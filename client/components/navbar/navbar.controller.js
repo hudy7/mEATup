@@ -20,6 +20,6 @@ angular.module('lunchApp')
       $location.path("/")
       $location.hash(id);
       $anchorScroll.yOffset = 100;
-      $anchorScrool();
+      $anchorScroll();
     }
   });
