@@ -5,6 +5,7 @@ angular.module('lunchApp')
     $scope.today = new Date();
     $scope.events = [];
     $scope.deals = [];
+    $scope.details = "Click on a marker on the map to view more information about that location.";
 
     $http.get('/api/events').success(function (events) {
       $scope.events = events;
@@ -33,6 +34,5 @@ angular.module('lunchApp')
     $scope.populateDetails = function (event){
       console.log("tetx", this.title);
       $scope.details = this.title.toString();
-
     };
   });
