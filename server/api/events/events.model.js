@@ -13,7 +13,10 @@ var EventsSchema = new Schema({
   attendees: [String],
   createdBy: String,
   createdByEmail: String,
-  createdAt: { type: Date, expires: 28800, default: Date.now }
+  createdAt: { type: Date, expires: 28800, default: Date.now },
+  lat: String,
+  long: String
+
 });
 
 module.exports = mongoose.model('Events', EventsSchema);
