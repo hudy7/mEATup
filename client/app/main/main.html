@@ -18,7 +18,7 @@
 
           <p>
             Time: {{event.time}} <br>
-            Event Location: {{event.location}} <br>
+            Event Location: {{event.locationName}} <br>
             Meeting Location: {{event.meetingLocation}} at {{event.meetingTime}} <br>
             Attendees: <span ng-repeat="person in event.attendees"><span ng-show="$last">{{person}}</span><span ng-show="($first || $middle) && !$last">{{person}}, </span> </span>
           </p>
@@ -46,7 +46,7 @@
           <map center="41.500491, -81.688635" zoom="14">
             <marker id="pin" ng-repeat="event in events"
                     position="{{event.lat}},{{event.long}}"
-                    title="<div class=&quot;locationTitle&quot;>{{event.location}}</div>
+                    title="<div class=&quot;locationTitle&quot;>{{event.locationName}}</div>
                           <div class=&quot;locationBar&quot;></div>
                           <div class=&quot;locationDetails&quot;>
                             <br><div>{{event.address}}</div>

@@ -1,6 +1,6 @@
 /**
  * Populate DB with sample data on server start
- * to disable, edit config/environment/index.js, and set `seedDB: false`
+ * to disable, edit config/environment/index.js, and set `seedDB: false'
  */
 
 'use strict';
@@ -34,7 +34,7 @@ Events.find({}).remove(function () {
       name: 'WALNUT WEDNESDAY!',
       description: 'LETS GET OUR FOOD TRUCK ON WITH SOME DELICIOUS TACOS!',
       time: '11:45',
-      location: 'Walnut street',
+      locationName: 'Walnut street',
       meetingLocation: '1st floor lobby',
       meetingTime: '11:30',
       attendees: ['Test User'],
@@ -54,7 +54,7 @@ Events.find({}).remove(function () {
       name: 'PIZZA TIME!!!',
       description: 'Lets go get vincenzas!',
       time: '12:00',
-      location: 'Vincenza\'s',
+      locationName: 'Vincenza\'s',
       meetingLocation: '13th kitchen',
       meetingTime: '11:55',
       attendees: ['Test User'],

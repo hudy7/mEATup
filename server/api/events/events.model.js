@@ -7,7 +7,7 @@ var EventsSchema = new Schema({
   name: String,
   description: String,
   time: String,
-  location: String,
+  locationName: String,
   meetingLocation: String,
   meetingTime: String,
   attendees: [String],

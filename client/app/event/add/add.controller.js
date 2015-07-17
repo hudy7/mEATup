@@ -17,6 +17,7 @@ angular.module('lunchApp')
       $scope.event.attendees = [];
       $scope.event.attendees.push(Auth.getCurrentUser().name);
       $scope.event.createdAt = new Date();
+      $scope.event.locationName = $scope.place.name;
       $http.post('/api/events/', $scope.event)
         .success(function () {
         });
@@ -34,5 +35,6 @@ angular.module('lunchApp')
 
     $scope.placeChanged = function() {
       $scope.place = this.getPlace();
+      console.log(this.getPlace());
     };
   });
