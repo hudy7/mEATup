@@ -27,8 +27,13 @@
 }
 
 @font-face {
-  font-family: Dinot-Regular;
-  src: url('../assets/fonts/Dinot/DIN-Regular.otf');
+  font-family: Dinot-Medium;
+  src: url('../assets/fonts/Dinot/DIN-Medium.otf');
+}
+
+@font-face {
+  font-family: Dinot-Black;
+  src: url('../assets/fonts/Dinot/DIN-Black.otf');
 }
 
 @font-face {
@@ -48,13 +53,14 @@
 }
 
 body {
-  font-family: Dinot-Regular, Arial, serif;
+  font-family: Dinot-Medium, Arial, serif;
+  background-color: #fbecd3;
 }
 
 body h1 {
-  font-family: Proforma-Book, Arial, serif;
+  font-family: Dinot-Black, Arial, serif;
 }
 
 body h2 {
-  font-family: Proforma-Book, Arial, serif;
+  font-family: Dinot-Black, Arial, serif;
 }

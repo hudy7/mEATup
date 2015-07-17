@@ -1,31 +1,114 @@
-.panel-default {
-  border-color: #3A3A38;
+.events-heading {
+   font-family: Dinot-Black, Arial, serif;
+   font-size: 30px;
+   line-height: 30px;
+   margin-left: 55px;
+   margin-top: 50px;
+   margin-right: 55px;
+   margin-bottom: 10px;
+ }
+
+.locations-heading {
+  font-family: Dinot-Black, Arial, serif;
+  font-size: 30px;
+  line-height: 30px;
+  margin-left: 55px;
+  margin-top: 50px;
+  margin-right: 55px;
+  margin-bottom: 10px;
 }
 
-.panel-default > .panel-heading {
-  color: #333;
-  background-color: #3A3A38;
-  border-color: #3A3A38;
+.left-float {
+   float: left;
+   background-color: #fbecd3;
+ }
+
+.green-rect {
+  background-color: #7cbb42;
+  height: 30px;
+  width: 100%;
+  display: block;
 }
 
-.panel-default > .panel-heading + .panel-collapse .panel-body {
-  border-top-color: #3A3A38;
+.events-list {
+  font-family: Dinot-Medium, Arial, serif;
+  margin-left: 55px;
+  margin-top: 10px;
+  margin-right: 55px;
+  margin-bottom: 10px;
+  padding: 0;
 }
 
-.panel-default > .panel-footer + .panel-collapse .panel-body {
-  border-bottom-color: #3A3A38;
+.white-line {
+  border-right: 3px solid #FFFFFF;
+  text-align: center;
+  margin-top: 0px;
 }
 
-.panel {
-  color: #3A3A38;
+.charcoal-div {
+  background-color: #3a3a38;
+  color: white;
+  margin-left: 0;
+  margin-top: 10px;
+  margin-right: 0px;
+  margin-bottom: 10px;
 }
 
-.panel-default > .panel-heading {
-  color: #FFFFFF;
+.event-center {
+  margin-top: 15px;
 }
 
-.map {
-  margin-left: 15px;
-  padding-left: 12px;
+.event-right {
+  margin-top: 20px;
+  text-align: right;
+  margin-right: 20px;
+}
 
+.green-date {
+  font-family: Dinot-Black, Arial, serif;
+  color: #7cbb42;
+  font-size: 70px;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding: 0;
+}
+
+.locationTitle {
+  font-family: Dinot-Bold, Arial, serif;
+  font-size: 36px;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.locationDetails {
+  font-family: Dinot-Medium, Arial, serif;
+  font-size: 24px;
+  color: white;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.locationBar {
+  height: 4px;
+  background-color: #f96f0e;
+  text-align: center;
+}
+
+.charcoal-bg {
+  background-color: #3a3a38;
+  height: 560px;
+  width: 100%;
+  margin-left: 0;
+  padding: 0;
+}
+
+map {
+  height: 500px;
+  width: 100%;
+}
+
+.map-margin {
+  margin-top: 30px;
+  margin-left: 55px;
 }

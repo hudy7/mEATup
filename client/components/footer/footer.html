@@ -1,13 +1,8 @@
-<div class="container-fluid footer-custom">
-  <footer>
-    <div class="container">
-      <p id="line-height">
-        <span class="glyphicon glyphicon-copyright-mark"></span> mEAT UP! v0.0.1
-        <span class="glyphicon glyphicon-asterisk"></span> <a href="https://twitter.com/Bro_Stone">@bro_stone</a>
-        <span class="glyphicon glyphicon-asterisk"></span> <a
-        href="https://github.com/brostone51/mEATup/issues">Issues</a>
-        <span class="glyphicon glyphicon-asterisk"></span> All rights reserved.
-      </p>
-    </div>
-  </footer>
+<div ng-controller="NavbarCtrl" class="container-fluid footer-custom">
+  <ul>
+    <li><a href="" ng-click="scrollTo('events')">EVENTS</a></li>
+    <li><a href="" ng-click="scrollTo('locations')">LOCATIONS</a></li>
+    <li><a href="" ng-click="scrollTo('freebies')">FREEBIES</a></li>
+    <li><a href="../profile">PROFILE</a></li>
+  </ul>
 </div>

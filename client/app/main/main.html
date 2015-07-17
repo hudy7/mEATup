@@ -1,30 +1,113 @@
-<div class="container">
-  <h1>Upcoming lunches:</h1>
+<div class="container-fluid">
 
-  <div class="container">
-    <div ng-repeat="event in events | orderBy: ['date','time']">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <span>
-            <a class="h2" ng-href="/event/{{event._id}}">{{event.name}}</a>
-            &emsp;WHERE: {{event.location}}
-            &emsp;TIME: {{event.time}}
-            &emsp;CREATED BY: {{event.createdBy}}
-          </span>
+  <div id="events" class="row events-heading">
+    <span class="left-float">EVENTS&emsp;</span><span class="green-rect"></span>
+  </div>
+
+  <div class="row events-list">
+
+    <div class="charcoal-div" ng-repeat="event in events | orderBy: ['date','time']">
+      <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 white-line">
+          <p class="green-date">{{today | date: "M/d"}}</p>
+
+          <p>{{event.name}}</p>
         </div>
-        <div class="panel-body">
-          <span ng-show="event.meetingLocation.length > 0">&emsp;Meet at {{event.meetingLocation}} at {{event.meetingTime}}</span>
-          <br>
-          <span>&emsp;{{event.description}}</span>
+        <div class="col-xs-0 col-sm-8 col-md-8 col-lg-8 event-center">
+          <p class="h4">{{event.description}}</p>
+
+          <p>
+            Time: {{event.time}} <br>
+            Event Location: {{event.location}} <br>
+            Meeting Location: {{event.meetingLocation}} at {{event.meetingTime}} <br>
+            Attendees: <span ng-repeat="person in event.attendees"><span ng-show="$last">{{person}}</span><span ng-show="($first || $middle) && !$last">{{person}}, </span> </span>
+          </p>
+        </div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <p class="event-right">
+            <img src="../../assets/images/plateIcon.png"/> <br/>
+            <a class="btn btn-default" ng-click="signUpUser(event)" style="margin-top: 10px; color: #7cbb42;">SIGN ME UP!</a>
+          </p>
         </div>
       </div>
     </div>
   </div>
-
-  <div class = "map">
-    <map center="41.500491, -81.688635" zoom="16" styles="[{stylers:[{hue:'FF6633'},{gamma:0.5},{weight:0.5}]},{elementType:'labels',stylers:[{visibility:'on'}]},{featureType:'water',stylers:[{color:'FF6633'}]}]"></map>
-
-  </div>
-
 </div>
 
+<div id="locations" class="row locations-heading">
+  <span class="left-float">LOCATIONS&emsp;</span><span class="green-rect"></span>
+</div>
+
+<div class="container-fluid charcoal-bg">
+  <div>
+    <div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <div class="map-margin">
+          <map center="41.500491, -81.688635" zoom="14">
+            <marker id="pin" ng-repeat="event in events"
+                    position="{{event.lat}},{{event.long}}"
+                    title="<div class=&quot;locationTitle&quot;>{{event.location}}</div>
+                          <div class=&quot;locationBar&quot;></div>
+                          <div class=&quot;locationDetails&quot;>
+                            <br><div>{{event.address}}</div>
+                            <br><img  src=&quot;../../assets/images/phoneIcon.png&quot;/>
+                            <br><div>{{event.phone}}</div>
+                            <br><img  src=&quot;../../assets/images/webIcon.png&quot;/>
+                            <br><div>{{event.website}}</div>
+                            <br><img  src=&quot;../../assets/images/personIcon.png&quot;/>
+                            <br><div>{{event.rating}} / 5</div>
+                          </div>"
+                    on-click="populateDetails()">
+            </marker>
+          </map>
+        </div>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <span ng-show="detailsClicked" class="white" ng-bind-html="details"></span>
+        <span ng-hide="detailsClicked" class="white">
+          <div class="locationDetails">
+
+            <div class="locationTitle">SELECT A LOCATION</div>
+            <div class="locationBar"></div>
+            <br><img src="../../assets/images/arrowIcon.png"/>
+            <br><div>CLICK</div>
+            <br><img src="../../assets/images/searchIcon.png"/>
+            <br><div>VIEW</div>
+            <br><img src="../../assets/images/webIcon.png"/>
+            <br><div>VISIT</div>
+            <br><img src="../../assets/images/personIcon.png"/>
+            <br> <div>INVITE FRIENDS</div>
+          </div>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div id="freebies" class="container-fluid">
+
+  <div class="row events-heading">
+    <span class="left-float">FREEBIES & DEALS&emsp;</span><span class="green-rect"></span>
+  </div>
+
+  <div class="row events-list">
+
+    <div class="charcoal-div" ng-repeat="deal in deals | orderBy: ['date','time']">
+      <div class="row">
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 white-line">
+          <p class="green-date">{{today | date: "M/d"}}</p>
+          <p>{{deal.name}}</p>
+        </div>
+        <div class="col-xs-0 col-sm-8 col-md-8 col-lg-8 event-center">
+          <p class="h4">{{deal.description}}</p>
+        </div>
+        <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2">
+          <p class="event-right">
+            <img src="../../assets/images/plateIcon.png"/> <br/>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
