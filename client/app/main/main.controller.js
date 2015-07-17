@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('lunchApp')
-  .controller('MainCtrl', function ($scope, $http, $stateParams, $state, Auth, $timeout) {
+  .controller('MainCtrl', function ($scope, $http, $stateParams, $state, Auth) {
     $scope.today = new Date();
     $scope.events = [];
     $scope.deals = [];
-    $scope.details = "Click on a marker on the map to view more information about that location.";
+    $scope.details = '';
     $scope.detailsClicked = false;
     $http.get('/api/events').success(function (events) {
       $scope.events = events;
@@ -43,7 +43,6 @@ angular.module('lunchApp')
 
     $scope.populateDetails = function (event){
       $scope.detailsClicked = true;
-      console.log("tetx", this.title);
       $scope.details = this.title.toString();
     };
 

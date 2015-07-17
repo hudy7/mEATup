@@ -17,9 +17,9 @@ angular.module('lunchApp')
     };
 
     $scope.scrollTo = function(id) {
-      $location.path("/")
+      $location.path('/');
       $location.hash(id);
       $anchorScroll.yOffset = 100;
       $anchorScroll();
-    }
+    };
   });
