@@ -12,7 +12,7 @@
       <span class="left-float">MY EVENTS&emsp;</span><span class="green-rect"></span>
     </div>
   </div>
-  <div class="charcoal-div" ng-repeat="event in events | orderBy: ['date','time']">
+  <div class="charcoal-div1" ng-repeat="event in events | orderBy: ['date','time']">
     <div class="row" ng-show="event.createdByEmail == getCurrentUser().email">
       <div class="col-xs-6 col-sm-2 col-md-2 col-lg-2 white-line">
         <p class="green-date">{{today | date: "M/d"}}</p>

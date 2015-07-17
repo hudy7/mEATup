@@ -11,3 +11,12 @@
 .section-details {
   margin-left: 55px;
 }
+
+.charcoal-div1 {
+  background-color: #3a3a38;
+  color: white;
+  margin-left: 65px;
+  margin-top: 10px;
+  margin-right: 65px;
+  margin-bottom: 10px;
+}
