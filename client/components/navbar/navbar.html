@@ -6,13 +6,14 @@
   <div class="container-fluid">
     <div class="navbar-collapse collapse" id="navbar-main">
       <ul class="nav navbar-nav">
+
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
              aria-expanded="false"><img src="../../assets/images/menuButton.png"/></a>
           <ul class="dropdown-menu">
-            <li><a href="#">Events</a></li>
-            <li><a href="#">Loactions</a></li>
-            <li><a href="#">Freebies/Deals</a></li>
+            <li><a href="" ng-click="scrollTo('events')">Events</a></li>
+            <li><a href="" ng-click="scrollTo('locations')">Locations</a></li>
+            <li><a href="" ng-click="scrollTo('freebies')">Freebies/Deals</a></li>
           </ul>
         </li>
         <li ng-show="isLoggedIn()" ng-class="{active: isActive('/add')}"><a href="/add"><img
